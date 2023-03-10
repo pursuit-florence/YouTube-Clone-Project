@@ -4,7 +4,7 @@ import './App.css';
 
 
 function App() {
-  console.log(BASE_URL)
+  
   return (
     <div className="App">
       <header className="App-header">
