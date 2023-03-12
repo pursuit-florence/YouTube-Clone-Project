@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from"./component/common/Home"
+// import Home from"./component/common/Home"
 import Nav from"./component/common/Nav"
 import Footer from"./component/common/Footer"
 import VideosIndex from"./component/videos/VideoIndex"
@@ -9,7 +9,7 @@ function App() {
   <>
   <Router>
     <Routes>
-    <Home />
+    {/* <Home /> */}
     <Nav/>
     <VideosIndex />
     <Route path="videos/:id" element={<VideoShow/>} />
