@@ -13,9 +13,9 @@ export default function Nav() {
       <nav>
         <ul>
           <li>
-            {/* <Link to="/home"> */}
+            {/* <Link to="/home">  */}
             Home
-            {/* </Link> */}
+             {/* </Link>  */}
           </li>
           <li>
             <Link to="/about">

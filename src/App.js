@@ -13,8 +13,9 @@ function App() {
     <Routes>
     <Route path="videos/:id" element={<VideoShow/>} />
     <Route path="/about" element={<Profile/>}/>
+    {/* <Route path="/home" element={<Home/>}/>  */}
     </Routes>
-    <Home /> 
+    
     <VideosIndex />
     <Footer/>
     </Router>
