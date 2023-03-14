@@ -6,6 +6,7 @@ import Nav from"./component/common/Nav"
 import Footer from"./component/common/Footer"
 import VideosIndex from"./component/videos/VideoIndex"
 import VideoShow from"./component/videos/VideoShow"
+import Profile from"./component/profile/Profile"
 function App() {
 const [allVideos, setAllVideos] = useState([])
   
@@ -17,15 +18,17 @@ useEffect(() => {
 
   return (
   <>
-  <Router>
-    <Routes>
-    <Home /> 
+    <Router>
     <Nav/>
-    <VideosIndex />
+    <Routes>
     <Route path="videos/:id" element={<VideoShow/>} />
-    <Footer/>
+    <Route path="/about" element={<Profile/>}/>
+    {/* <Route path="/home" element={<Home/>}/>  */}
     </Routes>
-  </Router>
+    
+    <VideosIndex />
+    <Footer/>
+    </Router>
   </>
   )
 }
