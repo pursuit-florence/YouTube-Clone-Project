@@ -1,9 +1,10 @@
-import React from "react";
 import YouTube from "react-youtube";
+import { useParams } from "react-router-dom";
 
-/* https://www.youtube.com/watch?v=_nBlN9yp9R8 */
 
-export default function VideoShow( {videoId} ) {
+export default function VideoShow() {
+  const  { id } = useParams();
+  console.log(id)
     function videoOnReady(event) {
       // access to player in all event handlers via event.target
       event.target.pauseVideo();
@@ -19,7 +20,7 @@ export default function VideoShow( {videoId} ) {
       
       return ( 
         <YouTube 
-            videoId="_nBlN9yp9R8" 
+            videoId={id} 
             opts={opts} 
             onReady={videoOnReady} 
         />
