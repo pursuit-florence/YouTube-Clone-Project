@@ -1,5 +1,6 @@
 import { useState } from "react";
 import VideoIndex from "../videos/VideoIndex.js";
+import "./Home.css"
 const key = process.env.REACT_APP_API_KEY;
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
       event.preventDefault();
       console.log(searchString)
       console.log(key)
-      return fetch(`https://youtube.googleapis.com/youtube/v3/search?key=${key}&q=${searchString}&part=snippet&maxResults=3&type=video`)
+      return fetch(`https://youtube.googleapis.com/youtube/v3/search?key=${key}&q=${searchString}&part=snippet&maxResults=9&type=video`)
       .then((results) => results.json())
       .then(response => {
       setAllVideos(response.items)
