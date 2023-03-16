@@ -1,6 +1,6 @@
 import YouTube from "react-youtube";
 import { useParams } from "react-router-dom";
-
+import "./VideoShow.css"
 
 export default function VideoShow() {
   const  { id } = useParams();
@@ -10,7 +10,7 @@ export default function VideoShow() {
       event.target.pauseVideo();
     }
     const opts = {
-        height: '390',
+        height: '340',
         width: '640',
         playerVars: {
           // https://developers.google.com/youtube/player_parameters
@@ -19,11 +19,13 @@ export default function VideoShow() {
       };
       
       return ( 
-        <YouTube 
-            videoId={id} 
-            opts={opts} 
-            onReady={videoOnReady} 
-        />
+        <span className="video-show">
+          <YouTube 
+              videoId={id} 
+              opts={opts} 
+              onReady={videoOnReady} 
+          />
+        </span>
       )
     
   

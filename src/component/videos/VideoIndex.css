@@ -1,3 +1,4 @@
-.video-listing {
-    display: grid;
+.video-thumbnail {
+    padding: 10px;
+    text-align: center;
 }
