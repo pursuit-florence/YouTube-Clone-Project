@@ -1,5 +1,6 @@
 import { useState } from "react";
-import VideoIndex from "../videos/VideoIndex.js";
+import VideoIndex from "../videos/VideoIndex.jsx";
+import "./Nav.css"
 const key = process.env.REACT_APP_API_KEY;
 
 export default function Home() {
@@ -22,19 +23,20 @@ export default function Home() {
     })
 }  
    return (
-      <div>
+      <div className="search-button">
         <form onSubmit={handleSubmit}> 
-          <input
+          <input className="details"
             type="text"
             value={searchString}
             id="searchString"
             onChange={handleTextChange}
           
           />
-          <input type="submit" />
+          <input className="submit"type="submit" />
         </form>
         <div className="video-listing"> 
-          {searchString.length ? <VideoIndex allVideos={allVideos}/> : <p>No Search Results Yet! Please submit search above!</p>}  
+          {searchString.length ? <VideoIndex allVideos={allVideos}/> :<p> <span className="error">No Search Results Yet!, Please submit search above!</span></p>}
+          <footer>This App was created by Elizabeth,Fernando and Florence </footer>  
       </div>
     </div>   
     )

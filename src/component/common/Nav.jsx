@@ -12,12 +12,13 @@ export default function Nav() {
       </article>
       <nav>
         <ul>
-          <li>
+          <li className="home">
             <Link to="/">
             Home
              </Link>
           </li>
-          <li>
+     
+          <li className="about">
             <Link to="/about">
             About
             </Link>
