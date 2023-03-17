@@ -4,7 +4,7 @@ import Nav from"./component/common/Nav"
 import VideosIndex from"./component/videos/VideoIndex"
 import VideoShow from"./component/videos/VideoShow"
 import Profile from"./component/profile/Profile"
-import { useEffect } from "react";
+
 export default function App() {
   const testYouTubeAPI = () => {
        console.log(process.env.REACT_APP_API_KEY)
@@ -14,17 +14,19 @@ export default function App() {
      });
      
   return (
-  <>
+  <div className="container">
     <Router>
       <Nav/>
       <Routes>
-        <Route path="/videos/:id" element={<VideoShow />} />
-        <Route path="/about" element={<Profile/>}/>
         <Route path="/" element={<Home/>}/>
-        <Route path="/videos" element={<VideosIndex />} />
+        <Route path="/about" element={<Profile/>}/>
+         <Route path="/videos" element={<VideosIndex />} />
+         <Route path="/videos/:id" element={<VideoShow />} />
+           
       </Routes>
+      <Footer />
     </Router>
-  </>
+  </div>
   )
 }
 
