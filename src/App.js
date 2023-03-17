@@ -4,10 +4,15 @@ import Nav from"./component/common/Nav"
 import VideosIndex from"./component/videos/VideoIndex"
 import VideoShow from"./component/videos/VideoShow"
 import Profile from"./component/profile/Profile"
-import Footer from "./component/common/Footer"
-import "./App.css"
 
 export default function App() {
+  const testYouTubeAPI = () => {
+       console.log(process.env.REACT_APP_API_KEY)
+   };
+     useEffect(() => {
+       testYouTubeAPI();
+     });
+     
   return (
   <div className="container">
     <Router>
