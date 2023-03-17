@@ -5,19 +5,19 @@ export default function Nav() {
       <header>
       <article>
         <h1>
-          {/* <Link to="/"> */}
-          Youtube
-          {/* </Link> */}
+          <Link to="/"> 
+            Youtube
+          </Link> 
         </h1>
       </article>
       <nav>
         <ul>
-          <li>
+          <li className="home">
             <Link to="/">
             Home
              </Link>
           </li>
-          <li>
+          <li className="about">
             <Link to="/about">
             About
             </Link>

@@ -30,16 +30,16 @@ export default function Home() {
     }).catch((error) => {setModal(true)})
 }  
    return (
-      <div>
+      <div className="search-button">
         <form onSubmit={handleSubmit}> 
-          <input
+          <input className="details"
             type="text"
             value={searchString}
             id="searchString"
             onChange={handleTextChange}
           
           />
-          <input type="submit" />
+          <input className="submit" type="submit" />
         </form>
         {modal ? (<div className="modal">
             <div className="modalContent">
@@ -48,8 +48,8 @@ export default function Home() {
             </div>
         </div>) : null }
         <div className="video-listing"> 
-          {searchString.length ? <VideoIndex allVideos={allVideos}/> : 
-          <p>No search result yet. Please submit a search above.</p>}  
+        {searchString.length ? <VideoIndex allVideos={allVideos}/> :<p> <span className="error">No Search Results Yet!, Please submit search above!</span></p>}
+          <footer>This App was created by Elizabeth,Fernando and Florence </footer>   
       </div>
     </div>   
     )
