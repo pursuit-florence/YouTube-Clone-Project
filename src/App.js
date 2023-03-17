@@ -4,6 +4,8 @@ import Nav from"./component/common/Nav"
 import VideosIndex from"./component/videos/VideoIndex"
 import VideoShow from"./component/videos/VideoShow"
 import Profile from"./component/profile/Profile"
+import Footer from "./component/common/Footer";
+import { useEffect } from "react";
 
 export default function App() {
   const testYouTubeAPI = () => {
