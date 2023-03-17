@@ -33,5 +33,30 @@
     padding: 20px;
     margin-bottom: 30px;
     column-gap: 40px;
-
+}
+.submit{
+    height:33px;
+    border-radius:5px ;
+    width:96px;
+    background-color: crimson;
+    color: white;
+}
+.search-box {
+    width: 370px;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+.search-button{
+    margin-top: 20px;
+ 
+}
+.details{
+    border-radius: 5px; 
+} 
+.error{
+    background-color: rgb(218, 225, 224);
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
 }

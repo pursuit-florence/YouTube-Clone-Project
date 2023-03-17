@@ -37,9 +37,9 @@ export default function Profile(){
   
   return(
           <div className="members">
-            <h1 className="project-heading">A Brief Description Of our Project</h1>
+            <h1 className="project-heading">A Brief Description of our Project</h1>
             <p className="project">
-              This is a  clone youtube project which  allows 
+              This is a  Youtube clone project which allows 
               you to search for videos in the search bar. The search will pull 
               videos based on what is typed in the bar. Then you go ahead and 
               choose a video and view it's content
@@ -58,10 +58,10 @@ export default function Profile(){
                 <h2 className="member-name">{member.name}</h2></div>
                   <p className="details">{member.about}</p>
                 
-              <a href={member.url}>
+              <a href={member.url} target="_blank">
               <br></br>
                 Github</a><br></br>
-                <a href={member.linkedin}>
+                <a href={member.linkedin} target="_blank">
                
                 linkedin</a><br></br>
              

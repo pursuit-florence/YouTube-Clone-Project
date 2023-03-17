@@ -12,12 +12,12 @@ export default function Nav() {
       </article>
       <nav>
         <ul>
-          <li className="home">
+          <li className="nav-links">
             <Link to="/">
             Home
              </Link>
           </li>
-          <li className="about">
+          <li className="nav-links">
             <Link to="/about">
             About
             </Link>
